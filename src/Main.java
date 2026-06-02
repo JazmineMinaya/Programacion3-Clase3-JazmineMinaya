@@ -1,18 +1,17 @@
 import java.util.Scanner;
-import java.util.ArrayList;
 
 public class Main {
     static Scanner scanner = new Scanner(System.in);
 
-    public static void validarEstudiante(String nombre, int edad, double indice) throws Exception {
+    public static void validarEstudiante(String nombre, int edad, double indice) throws EstudianteInvalidoException {
         if (nombre == null) {
-            throw new Exception("\nEl nombre no puede estar vacío");
+            throw new EstudianteInvalidoException("\nEl nombre no puede estar vacío");
         }
         if (edad < 18 || edad > 100) {
-            throw new Exception("\nLa edad debe ser mayor o igual a 18 años");
+            throw new EstudianteInvalidoException("\nLa edad debe ser mayor o igual a 18 años");
         }
         if (indice < 0.0 || indice > 4.0) {
-            throw new Exception("\nEl índice debe estar entre 0 y 4");
+            throw new EstudianteInvalidoException("\nEl índice debe estar entre 0 y 4");
         }
     }
 
@@ -33,8 +32,8 @@ public class Main {
 
             System.out.println("\nEstudiante registrado correctamente");
         }
-        catch (Exception e) {
-            System.out.println(e.getMessage());
+        catch (EstudianteInvalidoException e) {
+            System.out.println("\n" + e.getMessage());
         }
         finally {
             System.out.println("\nProceso finalizado");
