@@ -4,7 +4,7 @@ public class Main {
     static Scanner scanner = new Scanner(System.in);
 
     public static void validarEstudiante(String nombre, int edad, double indice) throws EstudianteInvalidoException {
-        if (nombre == null) {
+        if (nombre == null || nombre.trim().isEmpty()) {
             throw new EstudianteInvalidoException("El nombre no puede estar vacío");
         }
         if (edad < 18 || edad > 100) {
