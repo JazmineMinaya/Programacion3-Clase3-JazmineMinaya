@@ -5,13 +5,13 @@ public class Main {
 
     public static void validarEstudiante(String nombre, int edad, double indice) throws EstudianteInvalidoException {
         if (nombre == null) {
-            throw new EstudianteInvalidoException("\nEl nombre no puede estar vacío");
+            throw new EstudianteInvalidoException("El nombre no puede estar vacío");
         }
         if (edad < 18 || edad > 100) {
-            throw new EstudianteInvalidoException("\nLa edad debe ser mayor o igual a 18 años");
+            throw new EstudianteInvalidoException("La edad debe ser mayor o igual a 18 años");
         }
         if (indice < 0.0 || indice > 4.0) {
-            throw new EstudianteInvalidoException("\nEl índice debe estar entre 0 y 4");
+            throw new EstudianteInvalidoException("El índice debe estar entre 0 y 4");
         }
     }
 
@@ -33,10 +33,10 @@ public class Main {
             System.out.println("\nEstudiante registrado correctamente");
         }
         catch (EstudianteInvalidoException e) {
-            System.out.println("\n" + e.getMessage());
+            System.out.println("\nError: " + e.getMessage());
         }
         finally {
-            System.out.println("\nProceso finalizado");
+            System.out.println("Proceso finalizado");
         }
     }
 
