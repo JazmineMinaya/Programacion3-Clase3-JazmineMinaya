@@ -1,13 +1,37 @@
 package Clase4;
 import java.util.Scanner;
-import java.io.File;
 import java.io.FileWriter;
 
 public class Main {
     static Scanner scanner = new Scanner(System.in);
 
     public static void main(String[] args) {
-       
+       int opcion = 0;
+
+       do {
+            mostrarMenu();
+
+            System.out.print("\nIngrese la opción de su preferencia: ");
+            opcion = scanner.nextInt();
+            scanner.nextLine();
+
+            switch(opcion) {
+                case 1:
+                    agregarEstudiante();
+                    break;
+
+                case 2: 
+                
+                case 3:
+                    System.out.println("\nSaliendo del sistema...");
+                    break;
+                
+                default:
+                    System.out.println("\nOpción inválida");
+                    break;
+            }
+
+       } while (opcion != 3);
     }
 
     public static void mostrarMenu() {
@@ -20,9 +44,9 @@ public class Main {
     }
 
     public static void agregarEstudiante() {
-        System.out.println("AGREGAR ESTUDIANTE:\n");
+        System.out.println("\nAGREGAR ESTUDIANTE:\n");
 
-        System.out.print("Ingrese el nombre:");
+        System.out.print("Ingrese el nombre: ");
         String nombre = scanner.nextLine();
 
         System.out.print("Ingrese la edad: ");
