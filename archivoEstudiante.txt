@@ -1,0 +1,8 @@
+
+Nombre: Jazmine
+Edad: 19
+Matricula: 10006143
+
+Nombre: Rosa
+Edad: 20
+Matricula: 10006000

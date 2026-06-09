@@ -1,5 +1,7 @@
 package Clase4;
 import java.util.Scanner;
+import java.io.BufferedReader;
+import java.io.FileReader;
 import java.io.FileWriter;
 
 public class Main {
@@ -20,7 +22,9 @@ public class Main {
                     agregarEstudiante();
                     break;
 
-                case 2: 
+                case 2:
+                    mostrarEstudiantes();
+                    break;
                 
                 case 3:
                     System.out.println("\nSaliendo del sistema...");
@@ -61,7 +65,7 @@ public class Main {
         try {
             FileWriter archivoEstudiante = new FileWriter("archivoEstudiante.txt", true);
 
-            archivoEstudiante.write("Nombre: " + estudiante.getNombre() + "\n");
+            archivoEstudiante.write("\nNombre: " + estudiante.getNombre() + "\n");
             archivoEstudiante.write("Edad: " + estudiante.getEdad() + "\n");
             archivoEstudiante.write("Matricula: " + estudiante.getMatricula() + "\n");
 
@@ -70,6 +74,24 @@ public class Main {
             System.out.println("\nEl estudiante ha sido agregado exitosamente al archivo.");
         }
         catch(Exception e) {
+            System.out.println("\nError: " + e.getMessage());
+        }
+    }
+
+    public static void mostrarEstudiantes() {
+        System.out.println("\nLISTA DE ESTUDIANTES:");
+
+        try {
+            FileReader archivoEstudiantes = new FileReader("archivoEstudiante.txt");
+            BufferedReader buffer = new BufferedReader(archivoEstudiantes);
+            String linea;
+
+            while ((linea = buffer.readLine()) != null) {
+                System.out.println(linea);
+            }
+            buffer.close();
+        }
+        catch (Exception e) {
             System.out.println("\nError: " + e.getMessage());
         }
     }
