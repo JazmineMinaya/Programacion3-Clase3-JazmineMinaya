@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.collections.FXCollections?>
+
+<VBox xmlns="http://javafx.com/javafx/25"
+    xmlns:fx="http://javafx.com/fxml/1"
+    fx:controller="controller.PrincipalController"
+    spacing="15"
+    alignment="CENTER">
+
+    <Label
+        fx:id="lblTitulo"
+        styleClass="titulo"
+        text="Compra en Cafetería"/>
+
+    <TextField
+        fx:id="txtCliente"
+        promptText="Ingrese el nombre del cliente"
+        maxWidth="200" />
+    
+    <ComboBox
+        fx:id="cmbBebida"
+        promptText="Seleccione una bebida"
+        maxWidth="200" >
+    </ComboBox>
+
+    <TextField
+        fx:id="txtCantidad"
+        promptText="Ingrese la cantidad"
+        maxWidth="200" />
+
+    <CheckBox
+        fx:id="chkPostre"
+        text="Agregar Postre - RD$75" />
+
+    <HBox spacing="10"
+        alignment="CENTER">
+
+        <Button
+            fx:id="btnCalcular"
+            text="Calcular"
+            onAction="#calcular" />
+
+        <Button
+            fx:id="btnLimpiar"
+            text="Limpiar"
+            onAction="#limpiar"  />
+    </HBox>
+
+    <Label
+        fx:id="lblResumenCompra"
+        text="Resumen:"/>
+
+    <Label
+        fx:id="lblMensajeSoporte"
+        text="Esperando datos de la compra..."/>
+
+</VBox>

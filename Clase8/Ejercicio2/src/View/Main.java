@@ -15,10 +15,10 @@ public class Main extends Application {
 
         FXMLLoader loader = new FXMLLoader(getClass().getResource("/View/Principal.fxml"));
 
-        Scene scene = new Scene(loader.load(), 400, 400);
+        Scene scene = new Scene(loader.load(), 300, 400);
 
         stage.setScene(scene);
-        stage.setTitle("Conversor de Monedas");
+        stage.setTitle("Sistema de Compra en una Cafetería");
         stage.show();
     }
 }
