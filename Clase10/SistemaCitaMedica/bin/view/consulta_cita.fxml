@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox xmlns:fx="http://javafx.com/fxml"
+      fx:controller="controller.ConsultaCitaController"
+      spacing="10"
+      alignment="CENTER"
+      prefWidth="650"
+      prefHeight="500">
+
+    <Label
+        text="Consulta de Citas"
+        style="-fx-font-size: 20px"/>
+
+    <TableView
+        fx:id="tablaCitas"
+        prefWidth="575"
+        maxWidth="575"
+        prefHeight="400">
+
+        <columnResizePolicy>
+            <TableView 
+                fx:constant="CONSTRAINED_RESIZE_POLICY" />
+        </columnResizePolicy>
+
+        <columns>
+            <TableColumn
+                fx:id="colCodigo"
+                text="Código"/>
+            <TableColumn
+                fx:id="colPaciente"
+                text="Paciente"/>
+            <TableColumn
+                fx:id="colMedico"
+                text="Médico"/>
+            <TableColumn
+                fx:id="colEspecialidad"
+                text="Especialidad"/>
+            <TableColumn
+                fx:id="colFecha"
+                text="Fecha"/>
+            <TableColumn
+                fx:id="colHora"
+                text="Hora"/>
+            <TableColumn
+                fx:id="colEstado"
+                text="Estado"/>
+        </columns>
+    </TableView>
+
+    <HBox spacing="10" alignment="CENTER">
+        <Button
+            text="Guardar"
+            onAction="#guardarCitaArchivo"/>
+        <Button
+            text="Cargar"
+            onAction="#cargarArchivo"/>
+        <Button
+            text="Cancelar"
+            onAction="#cancelarCita"/>
+    </HBox>
+</VBox>

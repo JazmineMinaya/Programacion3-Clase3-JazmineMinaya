@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane xmlns:fx="http://javafx.com/fxml"
+            fx:controller="controller.RegistroCitaController">
+
+    <top>
+        <VBox>
+            <MenuBar>
+                <Menu text="Opciones">
+                    <MenuItem
+                        text="Consultar citas"
+                        onAction="#abrirConsultaCita"/>
+                    <MenuItem
+                        text="Salir"
+                        onAction="#salir"/>
+                </Menu>
+            </MenuBar>
+        </VBox>
+    </top>
+
+    <center>
+        <VBox spacing="10" alignment="CENTER">
+            <Label
+                text="Registro de Citas"
+                style="-fx-font-size: 20px"/>
+
+            <TextField
+                fx:id="txtCodigo"
+                promptText="Código"
+                maxWidth="300"/>
+            <TextField
+                fx:id="txtNombre"
+                promptText="Nombre del Paciente"
+                maxWidth="300"/>
+            <TextField
+                fx:id="txtCedula"
+                promptText="Cédula"
+                maxWidth="300"/>
+            <TextField
+                fx:id="txtTelefono"
+                promptText="Teléfono"
+                maxWidth="300"/>
+
+            <ComboBox
+                fx:id="cmbMedico"
+                promptText="Médico"
+                maxWidth="300"/>
+            <ComboBox
+                fx:id="cmbEspecialidad"
+                promptText="Especialidad"
+                maxWidth="300"/>
+
+            <DatePicker
+                fx:id="fechaCita"
+                promptText="Fecha"
+                maxWidth="300"/>
+
+            <TextField
+                fx:id="txtHora"
+                promptText="Hora"
+                maxWidth="300"/>
+            <TextArea
+                fx:id="txtMotivoConsulta"
+                promptText="Motivo de la Consulta"/>
+
+            <ComboBox
+                fx:id="cmbEstado"
+                promptText="Estado cita"
+                maxWidth="300"/>
+
+            <HBox spacing="10" alignment="CENTER">
+                <Button
+                    text="Registrar"
+                    onAction="#registrarCita"/>
+                <Button
+                    text="Limpiar"
+                    onAction="#limpiarFormulario"/>
+            </HBox>
+        </VBox>
+    </center>
+</BorderPane>
