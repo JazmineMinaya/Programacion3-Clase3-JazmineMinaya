@@ -48,8 +48,18 @@ public class RegistroCitaController {
 
     @FXML
    public void initialize() {
+        Especialidad neurologia = new Especialidad("Neurología");
+        Especialidad nutricion = new Especialidad("Nutrición");
+
+        cmbEspecialidad.getItems().addAll(neurologia, nutricion);
+
+        Medico primerMedico = new Medico("Melody Santos");
+        Medico segundoMedico = new Medico("Oliver Peralta");
+
+        cmbMedico.getItems().addAll(primerMedico, segundoMedico);
+
         cmbEstado.getItems().addAll("Programada", "Atendida", "Cancelada");
-   }
+    }
 
     @FXML
     public void abrirConsultaCita() {
