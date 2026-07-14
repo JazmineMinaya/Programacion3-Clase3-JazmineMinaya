@@ -1,0 +1,2 @@
+101;Jazmine;00000;8090000000;Melody Santos;Nutrición;2026-07-08;3:00 pm;Atendida;Problemas alimenticios
+102;Rosa Núñez;000;000;Oliver Peralta;Neurología;2026-07-24;8:00 pm;Programada;Dolores crónicos de cabeza
